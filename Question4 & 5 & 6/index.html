@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All Companies Client</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="mustache.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <script id="company-template" type="x-tmpl-mustache">
+      <div class='company' data-id="{{id}}">
+      <div class="company">
+          <p>Company: {{name}}<br>Products: {{#products}}{{title}}, {{/products}}</p>
+          <button id="update" type="button">Like</button>
+          <div id="counter">0</div>
+      </div>
+    </script>
+    <script id="product-template"  type="x-tmpl-mustache">
+      <div class="product">
+        <p>{{title}}</p>
+      </div>
+    </script>
+
+
+    <h1>All Companies Question4</h1>
+    <div id="companies"></div>
+  </body>
+</html>

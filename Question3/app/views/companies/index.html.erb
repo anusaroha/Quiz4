@@ -1,0 +1,13 @@
+<h1>All Companies</h1>
+<% @companies.each do |s| %>
+  <p>
+    <%= s.name%>
+    Products:
+    <ul>
+      <% s.products.each do |product| %>
+        <li><%= product.title %></li>
+      <% end %>
+    </ul>
+  </p>
+
+<% end %>
